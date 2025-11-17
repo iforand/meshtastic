@@ -1,3 +1,4 @@
+#if HAS_SCREEN
 #include "configuration.h"
 #include "main.h"
 
@@ -1489,4 +1490,5 @@ bool TFTDisplay::connect()
     return true;
 }
 
+#endif
 #endif

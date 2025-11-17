@@ -733,8 +733,11 @@ void Power::reboot()
     rp2040.reboot();
 #elif defined(ARCH_PORTDUINO)
     deInitApiServer();
+#if !MESHTASTIC_EXCLUDE_INPUTBROKER
     if (aLinuxInputImpl)
         aLinuxInputImpl->deInit();
+#endif
+
     SPI.end();
     Wire.end();
     Serial1.end();

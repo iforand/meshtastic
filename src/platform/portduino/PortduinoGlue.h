@@ -2,6 +2,7 @@
 #include <fstream>
 #include <map>
 #include <unordered_map>
+#include <unistd.h>
 
 #include "LR11x0Interface.h"
 #include "Module.h"
@@ -47,6 +48,7 @@ struct pinMapping {
 
 extern std::ofstream traceFile;
 extern Ch341Hal *ch341Hal;
+
 int initGPIOPin(int pinNum, std::string gpioChipname, int line);
 bool loadConfig(const char *configPath);
 static bool ends_with(std::string_view str, std::string_view suffix);

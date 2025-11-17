@@ -1,6 +1,6 @@
 #pragma once
 #ifdef ARCH_PORTDUINO
-
+#if !MESHTASTIC_EXCLUDE_INPUTBROKER
 #include "Adafruit_seesaw.h"
 #include "InputBroker.h"
 #include "concurrency/OSThread.h"
@@ -26,4 +26,5 @@ class SeesawRotary : public Observable<const InputEvent *>, public concurrency::
 };
 
 extern SeesawRotary *seesawRotary;
+#endif
 #endif

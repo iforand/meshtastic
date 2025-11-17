@@ -205,6 +205,7 @@ ScanI2C::FoundDevice rgb_found = ScanI2C::FoundDevice(ScanI2C::DeviceType::NONE,
 /// The I2C address of our Air Quality Indicator (if found)
 ScanI2C::DeviceAddress aqi_found = ScanI2C::ADDRESS_NONE;
 
+
 #if defined(T_WATCH_S3) || defined(T_LORA_PAGER)
 Adafruit_DRV2605 drv;
 #endif
@@ -981,7 +982,7 @@ void setup()
     pullup_sense = INPUT_PULLUP_SENSE;
 #endif
 #endif
-#if defined(ARCH_PORTDUINO)
+#if defined(ARCH_PORTDUINO) && !MESHTASTIC_EXCLUDE_INPUTBROKER
 
     if (portduino_config.userButtonPin.enabled) {
 

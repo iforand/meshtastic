@@ -1,5 +1,5 @@
 #pragma once
-
+#if HAS_SCREEN
 #include <GpioLogic.h>
 #include <OLEDDisplay.h>
 
@@ -64,3 +64,4 @@ class TFTDisplay : public OLEDDisplay
 
     uint16_t *linePixelBuffer = nullptr;
 };
+#endif

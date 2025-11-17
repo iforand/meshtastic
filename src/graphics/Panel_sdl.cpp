@@ -18,6 +18,7 @@ Contributors:
 Porting for SDL:
  [imliubo](https://github.com/imliubo)
 /----------------------------------------------------------------------------*/
+#if HAS_SCREEN
 #include "Panel_sdl.hpp"
 
 #if defined(SDL_h_)
@@ -684,4 +685,5 @@ void Panel_sdl::deinitFrameBuffer(void)
 } // namespace v1
 } // namespace lgfx
 
+#endif
 #endif

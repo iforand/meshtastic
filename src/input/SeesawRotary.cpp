@@ -1,4 +1,5 @@
 #ifdef ARCH_PORTDUINO
+#if !MESHTASTIC_EXCLUDE_INPUTBROKER
 #include "SeesawRotary.h"
 #include "input/InputBroker.h"
 
@@ -80,4 +81,5 @@ int32_t SeesawRotary::runOnce()
 
     return 50;
 }
+#endif
 #endif

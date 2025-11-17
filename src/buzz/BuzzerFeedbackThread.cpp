@@ -1,3 +1,4 @@
+#if !MESHTASTIC_EXCLUDE_INPUTBROKER
 #include "BuzzerFeedbackThread.h"
 #include "NodeDB.h"
 #include "buzz.h"
@@ -59,3 +60,4 @@ int BuzzerFeedbackThread::handleInputEvent(const InputEvent *event)
 
     return 0; // Allow other handlers to process the event
 }
+#endif

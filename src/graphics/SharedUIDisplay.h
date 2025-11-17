@@ -1,5 +1,6 @@
 #pragma once
 
+#if HAS_SCREEN
 #include <OLEDDisplay.h>
 #include <string>
 
@@ -62,3 +63,4 @@ bool isAllowedPunctuation(char c);
 std::string sanitizeString(const std::string &input);
 
 } // namespace graphics
+#endif

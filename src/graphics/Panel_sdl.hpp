@@ -20,6 +20,7 @@ Porting for SDL:
 /----------------------------------------------------------------------------*/
 #pragma once
 
+#if HAS_SCREEN
 #define SDL_MAIN_HANDLED
 // cppcheck-suppress preprocessorErrorDirective
 #if __has_include(<SDL2/SDL.h>)
@@ -163,4 +164,5 @@ struct Panel_sdl : public Panel_FrameBufferBase {
 //----------------------------------------------------------------------------
 } // namespace v1
 } // namespace lgfx
+#endif
 #endif

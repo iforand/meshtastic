@@ -1,9 +1,9 @@
 #include "SystemCommandsModule.h"
 #include "meshUtils.h"
-#if HAS_SCREEN
+#if HAS_SCREEN && !MESHTASTIC_EXCLUDE_INPUTBROKER 
 #include "graphics/Screen.h"
 #include "graphics/SharedUIDisplay.h"
-#endif
+
 #include "GPS.h"
 #include "MeshService.h"
 #include "Module.h"
@@ -121,3 +121,4 @@ int SystemCommandsModule::handleInputEvent(const InputEvent *event)
     }
     return false;
 }
+#endif
