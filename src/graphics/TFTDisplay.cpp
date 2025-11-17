@@ -1,5 +1,5 @@
-#if HAS_SCREEN
 #include "configuration.h"
+#if HAS_SCREEN
 #include "main.h"
 
 #if ARCH_PORTDUINO

@@ -1,5 +1,5 @@
-#if HAS_SCREEN
 #include "configuration.h"
+#if HAS_SCREEN
 #include "MeshService.h"
 #include "RTC.h"
 #include "draw/NodeListRenderer.h"

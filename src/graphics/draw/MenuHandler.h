@@ -1,6 +1,6 @@
 #pragma once
-#if HAS_SCREEN
 #include "configuration.h"
+#if HAS_SCREEN
 namespace graphics
 {
 

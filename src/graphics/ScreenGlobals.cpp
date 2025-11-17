@@ -1,3 +1,4 @@
+#include "configuration.h"
 #if HAS_SCREEN
 #include <string>
 #include <vector>
